@@ -1,3 +1,4 @@
+
 class Replicator
 
   # When the Enterprise calls Replicator.new, this method executes.
@@ -88,6 +89,7 @@ class Replicator
 
   # This moves the glass from the cupboard to inside the replicator.
   def retrieve_glass
+
     @enterprise.transporter.energize(
       @enterprise.cupboard.find_glass,
       @enterprise.cupboard.shelf,
@@ -96,6 +98,7 @@ class Replicator
   end
 
   def glass_inside_replicator
+
     # This reaches into the @inside_replicator location instance
     # and then into the `contents` of that instance, which is an array
     # and obtains the first element of that array.
@@ -174,6 +177,7 @@ class Replicator
   end
 
   def transport_glass_to_reactor
+
     @enterprise.transporter.energize(
       glass_inside_replicator,
       @inside_replicator,
@@ -190,6 +194,7 @@ class Replicator
   end
 
   def transport_glass_to_replicator_plate
+
     @enterprise.transporter.energize(
       glass_inside_replicator,
       @inside_replicator,
